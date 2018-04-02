@@ -3,224 +3,379 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+
+    <script>
+        $(document).ready(function($) {
+
+            $("#input_cpf").mask("999.999.999-99");
+            $("#celular1").mask("(99)9-9999 9999");
+            $("#celular2").mask("(99)9-9999 9999");
+            $("#celular3").mask("(99)9-9999 9999");
+            $("#celular4").mask("(99)9-9999 9999");
+            $("#celular5").mask("(99)9-9999 9999");
+            $("#celular6").mask("(99)9-9999 9999");
+            $("#celular7").mask("(99)9-9999 9999");
+            $("#placa_carro1").mask("aaa-9999");
+            $("#placa_carro2").mask("aaa-9999");
+
+        });
+    </script>
 
     <title></title>
+    <style>
+        body {
+            padding: 100px;
+            border: solid #c3c3c3 5px;
+
+        }
+        #assinatura{
+            border-bottom: 2px solid black;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0px;
+        }
+
+        #container_principal {
+            border: solid #e8e8e8 10px;
+            padding: 50px;
+        }
+
+        #prop {
+            width: 200px;
+            height: 30px;
+        }
+
+        #titulo_emergencia {
+            color: rgba(255, 79, 79, 0.85);
+        }
+    </style>
 </head>
 
 <body>
+    <br>
+    <br>
+    <div class="container" id="container_principal">
+        <h1>Cadastro de moradores / Inquilinos</h1><br><hr><br>
+        <form>
+            <h4>Informações Gerais</h4><br>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="prop">Proprietário</label>
+                    <input type="checkbox" class="form-control" id="prop">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputPassword4">Inquilino</label>
+                    <input type="checkbox" class="form-control" id="prop">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputPassword4">Apartamento</label>
+                    <input type="number" min="100" max="500" step="10" class="form-control">
 
-    <div id="div-form">
-        <form class="formulario">
-            <div id="div1">
-                <label class="campos-p" for="check-morador">Proprietário</label>
-                <input class="checks" type="checkbox" id="check-morador">
-                <label class="campos-p" for="check-inquilino">Inquilino</label>
-                <input class="checks" type="checkbox" id="check-inquilino">
-                <label class="campos-p" for="n-apto">Apartamento</label>
-                <input class="select-num" type="number" id="n-apto">
-                <label class="campos-p" for="let-bloco">Bloco</label>
-                <select class="select-num" id="let-bloco" selected="...">
-         <option>...</option>    
-         <option>A</option>
-         <option>B</option>
-         <option>C</option>
-         <option>D</option>
-         <option>E</option>
-         <option>F</option>
-         <option>G</option>
-        </select>
-                <br>
-                <br>
-                <label class="campos-p" for="nome-m">Nome:</label>
-                <input type="text" class="campos-p" id="nome-m"><br><br>
-                <label for="rg" class="campos-p">N°rg:          </label>
-                <input type="text" id="rg" class="campos-p">
-                <label for="cpf" class="campos-p">Cpf:</label>
-                <input type="text" id="cpf" class="campos-p"><br><br>
-                <label for="email" class="campos-p">Email: </label>
-                <input type="email" class="campos-p" id="email"><br><br>
-                <div id="div_emergencia">
-                    <p class="campos-p">Em caso de emergência, indique uma pessoa para contato imediato.</p>
-
-                    <label for="nome_familiar" class="campos-p">Nome:</label>
-                    <input type="text" class="campos-p" id="nome_familiar">
-
-                    <label for="num_familiar" class="campos-p">Tel:</label>
-                    <input type="text" class="campos-p" id="telefone_familiar">
 
                 </div>
+                <div class="form-group col-md-3">
+                    <label for="inputPassword4">Bloco</label>
+                    <select type="select" class="form-control">
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+          <option>E</option>
+          <option>F</option>
+          <option>G</option>
 
-                <label for="moradores_unid" class="campos-p">Moradores:</label>
-                <input type="text" class="campos-p" id="moradores_unid">
-                <label for="grau_parentesco" class="campos-p">Grau Parentesco</label>
-                <input type="text" id="grau_parentesco" class="campos-p">
-                <label for="idade_mor" class="campos-p">Idade</label>
-                <input type="text" id="idade_mor" class="campos-p">
-                <br>
-                <label for="moradores_unid" class="campos-p">Moradores:</label>
-                <input type="text" class="campos-p" id="moradores_unid">
-                <label for="grau_parentesco" class="campos-p">Grau Parentesco</label>
-                <input type="text" id="grau_parentesco" class="campos-p">
-                <label for="idade_mor" class="campos-p">Idade</label>
-                <input type="text" id="idade_mor" class="campos-p">
-                <br><label for="moradores_unid" class="campos-p">Moradores:</label>
-                <input type="text" class="campos-p" id="moradores_unid">
-                <label for="grau_parentesco" class="campos-p">Grau Parentesco</label>
-                <input type="text" id="grau_parentesco" class="campos-p">
-                <label for="idade_mor" class="campos-p">Idade</label>
-                <input type="text" id="idade_mor" class="campos-p">
-                <br><label for="moradores_unid" class="campos-p">Moradores:</label>
-                <input type="text" class="campos-p" id="moradores_unid">
-                <label for="grau_parentesco" class="campos-p">Grau Parentesco</label>
-                <input type="text" id="grau_parentesco" class="campos-p">
-                <label for="idade_mor" class="campos-p">Idade</label>
-                <input type="text" id="idade_mor" class="campos-p">
-                <br><label for="moradores_unid" class="campos-p">Moradores:</label>
-                <input type="text" class="campos-p" id="moradores_unid">
-                <label for="grau_parentesco" class="campos-p">Grau Parentesco</label>
-                <input type="text" id="grau_parentesco" class="campos-p">
-                <label for="idade_mor" class="campos-p">Idade</label>
-                <input type="text" id="idade_mor" class="campos-p">
-                <br>
-<!--                -->
-                <label for="nome_domestica" class="campos-p">Empregada:</label>
-                <input id="nome_domestica" class="campos-p" type="text">
-                <label for="num_domestica" class="campos-p">Tel:</label>
-                <input id="num_domestica" class="campos-p" type="text">
-
-
+          </select>
+                </div>
             </div>
+            <div class="form-group">
+                <label for="inputAddress">Nome</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+
+                    <label for="inputAddress2">RG</label>
+                    <input type="text" class="form-control" id="inputAddress2">
+                </div>
+                <div class="form-group col-md-6">
+
+                    <label>CPF</label>
+                    <input type="text" class="form-control" id="input_cpf" name="input_cpf">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputCity">Telefone Residencial</label>
+                    <input type="text" class="form-control" id="celular1">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="inputState">Telefone celular</label>
+                    <input type="text" class="form-control" id="celular2">
+
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Telefone comercial</label>
+                    <input type="text" class="form-control" id="celular3">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="email">Email:</label>
+                    <input class="form-control" type="text" id="email">
+                </div>
+            </div>
+            <hr>
+            <h4 id="titulo_emergencia">Em caso de emergência, indique uma pessoa com telefone para contato imediato:</h4>
+            
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nome_emergencia">Nome</label>
+                    <input id="nome_emergencia" type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="nome_emergencia">Telefone</label>
+                    <input id="nome_emergencia" type="text" class="form-control">
+                </div>
+                
+                
+            </div>
+            <hr>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="moradores">Moradores da unidade</label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="form-group col-md-5">
+                    <label>Grau de parentesco</label>
+                    <input type="text" class="form-control">
+                </div>
+                 <div class="form-group col-md-1">
+                    <label>Idade</label>
+                    <input type="number" max="100" min="1" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="moradores">2</label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="form-group col-md-5">
+                    <label>Grau de parentesco</label>
+                    <input type="text" class="form-control">
+                </div>
+                 <div class="form-group col-md-1">
+                    <label>Idade</label>
+                    <input type="number" max="100" min="1" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="moradores">3</label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="form-group col-md-5">
+                    <label>Grau de parentesco</label>
+                    <input type="text" class="form-control">
+                </div>
+                 <div class="form-group col-md-1">
+                    <label>Idade</label>
+                    <input type="number" max="100" min="1" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="moradores">4</label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="form-group col-md-5">
+                    <label>Grau de parentesco</label>
+                    <input type="text" class="form-control">
+                </div>
+                 <div class="form-group col-md-1">
+                    <label>Idade</label>
+                    <input type="number" max="100" min="1" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="moradores">5</label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="form-group col-md-5">
+                    <label>Grau de parentesco</label>
+                    <input type="text" class="form-control">
+                </div>
+                 <div class="form-group col-md-1">
+                    <label>Idade</label>
+                    <input type="number" max="100" min="1" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="moradores">6</label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="form-group col-md-5">
+                    <label>Grau de parentesco</label>
+                    <input type="text" class="form-control">
+                </div>
+                 <div class="form-group col-md-1">
+                    <label>Idade</label>
+                    <input type="number" max="100" min="1" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="moradores">Empregada</label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Telefone</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <h4>Informaçoes de veículos</h4> <br>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="moradores">Veículo</label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Marca</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Placa</label>
+                    <input id="placa_carro1" type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Vaga</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="moradores">Veículo</label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Marca</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Placa</label>
+                    <input id="placa_carro2" type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Vaga</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <h4>Caso seja inquilino</h4><br><hr>
+            <div class="form-row">
+            <div class="form-group col-md-12">
+                <label>Nome do Proprietário</label>
+                <input class="form-control" type="text">
+            </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>RG</label>
+                <input class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-6">
+                <label>CPF</label>
+                <input class="form-control" type="text">
+            </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Endereço</label>
+                <input class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-4">
+                <label>Cidade</label>
+                <input class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-2">
+                <label>Estado</label>
+                <input class="form-control" type="text">
+            </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-4">
+                <label>Telefone residencial</label>
+                <input id="celular4" class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-4">
+                <label>Telefone comercial</label>
+                <input id="celular5" class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-4">
+                <label>Telefone celular</label>
+                <input id="celular6" class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-12">
+                <label>Email</label>
+                <input  class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-12">
+                <label>Administrador da locação</label>
+                <input  class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-6">
+                <label>Endereço</label>
+                <input  class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-3">
+                <label>Cidade</label>
+                <input  class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-3">
+                <label>Estado</label>
+                <input  class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-4">
+                <label>Telefone</label>
+                <input  id="celular7" class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-8">
+                <label>Email</label>
+                <input  class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-9">
+                <label>Assinatura do condômino</label>
+                <input id="assinatura"  class="form-control" type="text">
+            </div>
+                <div class="form-group col-md-3">
+                <label>Data</label>
+                <input  class="form-control" type="date">
+            </div>
+                
+            </div>
+            <br>
+            <br>
+            
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>
-
 </body>
 
 </html>
-<style>
-    body {
-        font-family: calibri;
-
-    }
-    #nome_domestica{
-        width: 270px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    #idade_mor {
-        width: 40px
-    }
-
-    #moradores_unid {
-        margin-top: 35px;
-    }
-
-    #grau_parentesco {
-        width: 70px;
-        margin-left: -3px;
-    }
-
-    .formulario {
-        width: 80%;
-        height: auto;
-        background-color: #b7dbcf;
-        border: none;
-        border-radius: 5px;
-        font-size: 15pt;
-        padding: 10px;
-
-
-    }
-
-    .campos-p {
-        position: relative;
-        bottom: 8px;
-        margin: 5px;
-        border-radius: 5px;
-        border: none;
-        font-family: calibri;
-        font-size: 20px;
-    }
-
-
-
-    .checks {
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-        margin: 5px;
-    }
-
-    .select-num {
-        height: 20px;
-        width: 35px;
-        background-color: #eee;
-        position: relative;
-        bottom: 8px;
-        margin: 0px;
-        border: 0.5px gray solid;
-        border-radius: 5px;
-        padding-left: 3px;
-        padding-right: -3px;
-
-    }
-
-    #nome-m {
-        width: 570px;
-        height: 20px;
-    }
-
-    #div1 {
-        margin: 10px;
-        display: table;
-        margin: auto;
-    }
-
-    #div-form {
-        width: 70%;
-        height: auto;
-        margin-left: 290px;
-    }
-
-    #rg {
-        margin-left: 13px;
-        width: 249px;
-        height: 20px;
-    }
-
-    #cpf {
-        width: 269px;
-        height: 20px;
-
-    }
-
-    #email {
-        width: 570px;
-        height: 20px;
-    }
-
-    #nome_familiar {
-        width: 255px;
-        height: 20px;
-        margin-left: -2px;
-    }
-
-    #div_emergencia {
-        background-color: #f57a7a;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        border-radius: 5px;
-
-        width: auto;
-    }
-
-    #div_emergencia:hover {
-        background-color: #f8a638;
-    }
-
-    #telefone_familiar {
-        height: 20px;
-
-        width: 260px;
-    }
-</style>
